@@ -144,6 +144,8 @@ return [
         App\Providers\AuthServiceProvider::class,
         App\Providers\EventServiceProvider::class,
         App\Providers\RouteServiceProvider::class,
+
+        Laravel\Socialite\SocialiteServiceProvider::class,
         Tequilarapido\Okta\OktaServiceProvider::class,
 
     ],

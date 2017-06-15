@@ -14,3 +14,6 @@
 Route::get('/', function () {
     return view('welcome');
 });
+
+Route::get('auth/okta', 'Auth\AuthController@redirectToProvider');
+Route::get('auth/okta/callback', 'Auth\AuthController@handleProviderCallback');
