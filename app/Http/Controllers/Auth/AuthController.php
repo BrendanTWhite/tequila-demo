@@ -84,6 +84,8 @@ class AuthController extends Controller
     {
         $user = Socialite::driver('okta')->user();
 
+        dd($user);
+
         // $user->token;
     }
 
