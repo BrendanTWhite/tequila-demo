@@ -16,7 +16,9 @@ class AppServiceProvider extends ServiceProvider
     {
         Socialite::extend('okta', function ($app) {
             $config = $app['config']['services.okta'];
-            return Socialite::buildProvider('Tequilarapido\Okta\OktaProvider', $config);
+            $provider = Socialite::buildProvider('Tequilarapido\Okta\OktaProvider', $config);
+            $provider->setOktaUrl($config['url']);
+            return $provider;
         });
     }
 
