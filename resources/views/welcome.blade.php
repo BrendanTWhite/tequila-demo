@@ -38,7 +38,7 @@
     <body>
         <div class="container">
             <div class="content">
-                <div class="title">Laravel 5</div>
+                <div class="title"><a href="/auth/okta/">Laravel 5</a></div>
             </div>
         </div>
     </body>
