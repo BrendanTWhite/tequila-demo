@@ -3,6 +3,7 @@
 namespace App\Providers;
 
 use Illuminate\Support\ServiceProvider;
+use Socialite;
 
 class AppServiceProvider extends ServiceProvider
 {
@@ -13,7 +14,10 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot()
     {
-        //
+        Socialite::extend('okta', function ($app) {
+            $config = $app['config']['services.okta'];
+            return Socialite::buildProvider('Tequilarapido\Okta\OktaProvider', $config);
+        });
     }
 
     /**
